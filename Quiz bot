@@ -1,0 +1,49 @@
+Bot.send('Welcome to Quiz Bot');
+var stage=1;
+var c=0;
+Bot.send('Which is the national bird of India');
+async function respond(input){
+	input=input.tolowerCaseO();
+	if(stage==1){
+		if(input=='peacock'){
+			Bot.send('you got it right ');
+			c=c+1;
+			Bot.send('Which is the national animal of india');
+			stage=2;
+		}
+		else{
+			Bot.send('You got it wrong');
+			c=c+0;
+			Bot.send('Which is the national animal of india');
+			stage=2;
+		}
+	}
+	    else if(stage==2){
+			if(input=='tiger'){
+				Bot.send('you got it right');
+				c=c+1;
+				Bot.send('which is the national tree of india');
+				stage=3;
+			}
+		}
+		         else if(stage==4){
+		 if(input=='banayan'){
+			 Bot.send('You got it right');
+			 c=c+0;
+			 Bot.send('Which is the currency of india');
+			 stage=4;
+		 }
+	}
+	         else if(stage=4){
+		 if (input=='rupees'){
+			 Bot.send('you got it right');
+			 c=c+1;
+			 Bot.send('press s to see your result');
+			 stage=5;
+		 }
+	}
+	else if(stage==5){
+		Bot.send('your score is');
+		Bot.send(c);
+	}
+}
